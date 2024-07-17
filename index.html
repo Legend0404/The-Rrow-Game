@@ -10,6 +10,8 @@
     <script>
     let x = 100
     let y = 200
+    let 2y = 400
+    let 2x = 200
         function setup () {
             createCanvas(windowWidth-20,windowHeight-20)
         }
@@ -31,6 +33,21 @@
                 x +=1
             }
 
+        }
+        square(2x,2y,50)
+        if (keyIsPressed === true) {
+            if (keyCode === 87){
+                2y -=1
+            }
+          else if (keyCode === 83) {
+            2y +=1
+          } 
+          else if (keyCode === 65) {
+            2x -=1
+          }
+          else if (keyCode === 68) {
+            2x +=1
+          }
         }
         }    </script>
     
