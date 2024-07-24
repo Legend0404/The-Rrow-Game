@@ -12,10 +12,12 @@
     let y = 200
     let a = 400
     let z = 200
-    let cx = random(windowWidth)
-    let cy = random(windowHeight)
+    let cx;
+    let cy; 
     function setup () {
             createCanvas(windowWidth-20,windowHeight-20)
+            cx = random(windowWidth)
+            cy = random(windowHeight)
         }
         function draw () {
             background("cornsilk")
