@@ -20,6 +20,10 @@
             cy = random(windowHeight)
         }
         function draw () {
+            let d = dist(a,z,cx,cy)
+            if(d < 100){
+                print("touching")
+            }
             background("cornsilk")
             fill("turquoise")
             square(x,y,50)
@@ -40,6 +44,7 @@
             }
 
         }
+        fill("turquoise")
         square(z,a,50)
         if (keyIsPressed === true) {
             if (keyCode === 87){
