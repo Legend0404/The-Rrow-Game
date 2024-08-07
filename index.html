@@ -14,7 +14,8 @@
     let z = 200
     let cx;
     let cy;
-    let score = 0; 
+    let p1_score = 0; 
+    let p2_score = 0;
     function setup () {
             createCanvas(windowWidth-20,windowHeight-20)
             cx = random(windowWidth)
@@ -25,7 +26,9 @@
             print(d)
             if(d < 80){
                 print("touching")
-                score++;
+                p1_score++;
+                cx = newrandom(windowWidth)
+                cy = newrandom(windowHeight)
             }
             text("score :" score, 10, 20)
             background("cornsilk")
