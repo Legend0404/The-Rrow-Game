@@ -30,9 +30,18 @@
                 cx = random(windowWidth)
                 cy = random(windowHeight)
             }
+            let di = dist(z,a,cx,cy)
+            print(di)
+            if(di< 80){
+                print("touching")
+                p2_score++;
+                cx = random(windowWidth)
+                cy = random(windowHeight)
+            }
             background("orange")
             fill("#29335C")
             text("score :"+ p1_score , 10, 20)
+            text("score :"+ p2_score , 50, 20)
             square(x,y,50)
             fill("mocha")
             circle(cx,cy,50)
