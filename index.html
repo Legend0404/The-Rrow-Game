@@ -18,7 +18,6 @@
     let p2_score = 0;
     function setup () {
             createCanvas(windowWidth-20,windowHeight-20)
-            text("hi",10, 20)
             cx = random(windowWidth)
             cy = random(windowHeight)
         }
@@ -31,9 +30,9 @@
                 cx = random(windowWidth)
                 cy = random(windowHeight)
             }
-            text("score :"+ p1_score , 10, 20)
             background("cornsilk")
             fill("turquoise")
+            text("score :"+ p1_score , 10, 20)
             square(x,y,50)
             fill("mocha")
             circle(cx,cy,50)
