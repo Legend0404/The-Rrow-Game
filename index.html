@@ -44,7 +44,7 @@
             text("score :"+ p2_score , 60, 20)
             square(x,y,50)
             fill("mocha")
-            circle(cx,cy,50)
+            circle(cx,cy,50) 
         if (keyIsPressed === true){
             if (keyCode === 38){
                 y -= 1
@@ -76,6 +76,10 @@
             z +=1
           }
         }
+        if(p1_score ==3 ){
+            text("P1 wins",windowWidth/2,windowHeight/2)
+        }
+
         }    </script>
     
 </body>
