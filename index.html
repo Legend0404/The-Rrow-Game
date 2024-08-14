@@ -8,83 +8,85 @@
 </head>
 <body>
     <script>
-    let x = 100
-    let y = 200
-    let a = 400
-    let z = 200
+    let x = 100;
+    let y = 200;
+    let a = 400;
+    let z = 200;
     let cx;
     let cy;
     let p1_score = 0; 
     let p2_score = 0;
     function setup () {
-            createCanvas(windowWidth-20,windowHeight-20)
-            cx = random(windowWidth)
-            cy = random(windowHeight)
+            createCanvas(windowWidth-20,windowHeight-20);
+            cx = random(windowWidth);
+            cy = random(windowHeight);
         }
         function draw () {
-            let d = dist(x,y,cx,cy)
-            print(d)
+            let d = dist(x,y,cx,cy);
+            print(d);
             if(d < 80){
-                print("touching")
+                print("touching");
                 p1_score++;
-                cx = random(windowWidth)
-                cy = random(windowHeight)
+                cx = random(windowWidth);
+                cy = random(windowHeight);
             }
-            let di = dist(z,a,cx,cy)
-            print(di)
+            let di = dist(z,a,cx,cy);
+            print(di);
             if(di< 80){
-                print("touching")
+                print("touching");
                 p2_score++;
-                cx = random(windowWidth)
-                cy = random(windowHeight)
+                cx = random(windowWidth);
+                cy = random(windowHeight);
             }
-            background("orange")
-            fill("#29335C")
-            textSize(14)
-            text("score :"+ p1_score , 10, 20)
-            text("score :"+ p2_score , 60, 20)
-            square(x,y,50)
-            fill("mocha")
-            circle(cx,cy,50) 
+            background("orange");
+            fill("#29335C");
+            textSize(14);
+            text("score :"+ p1_score , 10, 20);
+            text("score :"+ p2_score , 60, 20);
+            square(x,y,50);
+            fill("mocha");
+            circle(cx,cy,50);
         if (keyIsPressed === true){
             if (keyCode === 38){
-                y -=5
+                y -=5;
             }
             else if (keyCode === 40) {
-                y +=5
+                y +=5;
             }
             else if (keyCode === 37) {
-                x -=5
+                x -=5;
             }
             else if (keyCode ===  39) {
-                x +=5
+                x +=5;
             }
 
         }
-        fill("#DB2B39")
-        square(z,a,50)
+        fill("#DB2B39");
+        square(z,a,50);
         if (keyIsPressed === true) {
             if (keyCode === 87){
-                a -=5
+                a -=5;
 
             }
           else if (keyCode === 83) {
-            a +=5
+            a +=5;
           } 
           else if (keyCode === 65) {
-            z -=5
+            z -=5;
           }
           else if (keyCode === 68) {
-            z +=5
+            z +=5;
           }
         }
         if(p1_score ==3 ){
-            textSize(70)
-            text("P1 wins",windowWidth/2,windowHeight/2)
+            textSize(70);
+            text("P1 wins",windowWidth/2,windowHeight/2);
+            noLoop();
         }
         if(p2_score ==3 ){
-            textSize(70)
-            text("P2 wins",windowWidth/2,windowHeight/2)
+            textSize(70);
+            text("P2 wins",windowWidth/2,windowHeight/2);
+            noLoop();
         }
         }    </script>
     
